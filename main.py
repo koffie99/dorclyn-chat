@@ -4,10 +4,10 @@ import telegram
 from telegram.ext import Updater, MessageHandler, CommandHandler, Filters
 
 #set OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 #initialize Telegram bot
-bot = telegram.Bot(token="6065055791:AAHy3xq8Pwy-iR7ODx4NT7unPvkGNwiqyDI")
+bot = telegram.Bot(token="6091762013:AAFaRL8cxKM1q3WPLIeShjc0aJU4LOv4oiE")
 
 def generate_response(prompt):
   completions = openai.Completion.create(
@@ -30,7 +30,7 @@ def handle_message(update, context):
   bot.send_message(chat_id=chat_id, text=response)
 
 #set up the Telegram bot to listen for incoming messages
-updater = Updater("6065055791:AAHy3xq8Pwy-iR7ODx4NT7unPvkGNwiqyDI", use_context=True)
+updater = Updater("6091762013:AAFaRL8cxKM1q3WPLIeShjc0aJU4LOv4oiE", use_context=True)
 dispatcher = updater.dispatcher
 message_handler = MessageHandler(Filters.text, handle_message)
 dispatcher.add_handler(message_handler)
